@@ -1,32 +1,24 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div>
+    <Header></Header>
+    <router-view></router-view>
+    <!-- 通过路由元的方式来控制底部是否显示 在Footer组件中控制的是第1个 -->
+    <Footer></Footer>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+// 引入其它组件  App.vue相当于一个组件的大容器
+import Header from "./components/Header/index.vue";
+import Footer from "./components/Footer"; // 可以省略index.vue
+export default {
+  name: "App",
+  components: {
+    // 注册组件
+    Header,
+    Footer,
+  },
+};
+</script>
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+<style></style>

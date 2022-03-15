@@ -5,8 +5,12 @@ import store from './store'
 
 Vue.config.productionTip = false
 
-new Vue({
+import * as API from '@/api'
+
+const vm = new Vue({
   router,
-  store,
-  render: h => h(App)
+  store, // 和vm对象进行关联
+  render: h => h(App),
 }).$mount('#app')
+
+console.log('mainvm', vm);
