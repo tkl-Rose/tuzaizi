@@ -21,4 +21,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+@import "/public/css/reset.css";
+</style>
