@@ -4,7 +4,8 @@ import router from './router'
 import store from './store'
 
 
-
+//css样式引入
+import './common/common.scss'
 
 //element-ui的按需引入
 import {
