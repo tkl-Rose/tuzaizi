@@ -1,18 +1,38 @@
 [
   {
       "id":"1",
-      "imgUrl":"/images/banner1.jpg"
+      "name": "【崩坏三/米哈游】小不点茶会系列抱枕靠枕丽塔浮华八重樱",
+      "price":"￥79元",
+      "imgUrl":"https://image4.cnpp.cn/upload/images/20190629/17240597527_800x800.jpg_292_292.jpg"
   },
   {
       "id":"2",
-      "imgUrl":"/images/banner2.jpg"
+      "name": "【崩坏三/米哈游】女武神侧颜盲盒金属挂件(单抽) mihoyo",
+      "price":"￥35元",
+      "imgUrl":"https://image.maigoo.com/upload/images/20200427/11314962136_800x800.jpg_292_292.jpg"
   },
   {
       "id":"3",
-      "imgUrl":"/images/banner3.jpg"
+      "name": "【崩坏三/米哈游】女武神Q版祈福开运刺绣御守挂件",
+      "price":"￥28元",
+      "imgUrl":"https://image4.cnpp.cn/upload/images/20200427/11315026359_800x800.jpg_292_292.jpg"
   },
   {
       "id":"4",
-      "imgUrl":"/images/banner4.jpg"
-  }
+      "name": "【崩坏三/米哈游】德莉莎沙雕亚克力挂件糖藕 魔法少女 誓约",
+      "price":"￥20元",
+      "imgUrl":"https://image.maigoo.com/upload/images/20200427/11314985429_800x800.jpg_292_292.jpg"
+  },
+  {
+    "id":"5",
+    "name": "【崩坏三】八重樱芽衣女王八重霞防弹玻璃镜面数显充电",
+    "price":"￥149元",
+    "imgUrl":"https://image.maigoo.com/upload/images/20200104/18300613783_800x800.jpg_292_292.jpg"
+},
+{
+    "id":"6",
+    "name": "【崩坏三】崩坏3女武神鼠标垫 数码用品大鼠标垫miHoyo",
+    "price":"￥60元",
+    "imgUrl":"https://image.maigoo.com/upload/images/20200427/11314848147_800x800.jpg_292_292.jpg"
+}
 ]
