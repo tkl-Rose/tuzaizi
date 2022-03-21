@@ -8,7 +8,7 @@ import NProgress from 'nprogress' // 引入进度条模块
 import {
     getUserTempId
 } from '@/utils/getUserTempId'
-import store from '@/store'
+
 
 // 将来我们要发送很多次请求 有不同的模块 有不同的数据
 // 2. 创建实例对象 然后统一配置之后再去发送请求
@@ -29,12 +29,12 @@ ajax.interceptors.request.use(config => {
     // config.headers.userTempId = uuidv4()
     config.headers.userTempId = getUserTempId()
 
-    let token = store.state.user.token
+    // let token = store.state.user.token
 
     // 判断一下，如果没有token则要重新赋值一个token
-    if (token) {
-        config.headers.token = token
-    }
+    // if (token) {
+    //     config.headers.token = token
+    // }
 
     return config // 返回配置项 这个config里面包含请求的一些配置信息 url method
 })

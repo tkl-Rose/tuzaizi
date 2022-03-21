@@ -50,7 +50,7 @@
     </div>
     <transition name="fade">
       <div v-show="seen" class="item-children">
-        <div class="container1">
+        <div class="cont">
           <ul class="children-list">
             <li v-for="banner in bannerList" :key="banner.id" class="first">
               <img :src="banner.imgUrl" alt="" />
@@ -149,6 +149,7 @@ export default {
   align-items: center;
 }
 .nav-list {
+  // position: absolute;
   display: flex;
   text-align: center;
   line-height: 88px;
@@ -186,19 +187,21 @@ export default {
   }
 }
 .item-children {
+  position: absolute;
   width: 100%;
   height: 200px;
   border-top: 1px solid #efefef;
   border-bottom: 2px solid #efefef;
   box-shadow: 2px 2px 10px #efefef;
 }
-.container1 {
+.cont {
   display: flex;
   width: 1226px;
   height: 200px;
   margin-left: 300px;
 }
 .children-list {
+  position: relative;
   display: block;
   display: flex;
   height: 200px;

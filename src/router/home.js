@@ -20,9 +20,7 @@ const state = {
 const actions = {
     // 可以做异步操作
     // 1. 获取三级分类信息数据
-    async getCategoryListData({
-        commit
-    }) {
+    async getCategoryListData(commit) {
         const result = await reqCategoryListData()
         if (result.code === 200) { // 根据状态码来判断是否真正的有请求回来的数据
             // 提交给mutations来操作state中的数据

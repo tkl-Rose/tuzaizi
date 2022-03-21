@@ -16,6 +16,10 @@ export default {
     // 注册组件
     Header,
   },
+  mounted() {
+    //三级导航派发请求
+    this.$store.dispatch("home/getCategoryListData");
+  },
 };
 </script>
 
