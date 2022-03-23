@@ -9,6 +9,7 @@
 import {
     reqCategoryListData,
     reqBannerListData,
+    reqSwiperListData
 } from '@/api'
 
 const state = {
@@ -16,6 +17,8 @@ const state = {
     categoryList: [],
     // 存储轮播图数据
     bannerList: [],
+    //轮播图数据
+    swiperList: []
 }
 const actions = {
     // 可以做异步操作
@@ -43,6 +46,18 @@ const actions = {
             console.log(result.message);
         }
     },
+
+    //3.轮播图中的数据
+    async getSwiperListData({
+        commit
+    }) {
+        const result = await reqSwiperListData()
+        if (result.code === 200) {
+            commit('SAVE_SWIPER_LIST_DATA', result.data)
+        } else {
+            console.log(result.message);
+        }
+    }
 }
 const mutations = {
     SAVE_CATEGORY_LIST_DATA(state, payload) {
@@ -52,6 +67,10 @@ const mutations = {
     SAVE_BANNER_LIST_DATA(state, payload) {
         state.bannerList = payload
     },
+    //3.将轮播图中的数据存入state中
+    SAVE_SWIPER_LIST_DATA(state, payload) {
+        state.swiperList = payload
+    }
 }
 const getters = {}
 

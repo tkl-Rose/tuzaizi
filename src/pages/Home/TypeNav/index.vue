@@ -103,6 +103,7 @@ export default {
     width: 1120px;
     height: 520px;
     // border: 1px solid #333;
+    position: absolute;
     margin-left: 300px;
     .all {
       width: 210px;
@@ -147,6 +148,7 @@ export default {
       }
 
       .all-sort-list2 {
+        filter: alpha(opacity=0);
         .item {
           width: 200px;
           h3 {
@@ -170,7 +172,7 @@ export default {
             background: #f7f7f7;
             left: 200px;
             top: 0;
-            z-index: 9999 !important;
+            z-index: 9999;
 
             .subitem {
               float: left;

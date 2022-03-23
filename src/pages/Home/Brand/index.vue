@@ -188,15 +188,17 @@ export default {
 }
 .item-children {
   position: absolute;
-  width: 100%;
+  width: 2000px;
   height: 200px;
   border-top: 1px solid #efefef;
   border-bottom: 2px solid #efefef;
   box-shadow: 2px 2px 10px #efefef;
+  z-index: 10000 !important;
+  background-color: #fff;
 }
 .cont {
   display: flex;
-  width: 1226px;
+  width: 1500px;
   height: 200px;
   margin-left: 300px;
 }
@@ -207,6 +209,7 @@ export default {
   height: 200px;
   text-align: center;
   font-size: 13px;
+  background-color: #fff;
 }
 .first {
   width: 100px;

@@ -7,18 +7,23 @@ import store from './store'
 //css样式引入
 import './common/common.scss'
 
+// 引入swiper样式文件
+import 'swiper/css/swiper.min.css'
+
 //element-ui的按需引入
 import {
   Button,
   MessageBox,
   Message,
   Input,
-  Autocomplete
+  Autocomplete,
+  Carousel
 } from 'element-ui';
 // Vue.component(Button.name, Button);    上线两种形式一样
 Vue.use(Button)
 Vue.use(Input)
 Vue.use(Autocomplete)
+Vue.use(Carousel)
 
 //这就是第二类组件的注册方式
 Vue.prototype.$msgbox = MessageBox;

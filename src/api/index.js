@@ -10,3 +10,5 @@ import mockAjax from './mockAjax'
 export const reqBannerListData = () => mockAjax.get('/banner')
 //获取三级分类导航数据
 export const reqCategoryListData = () => ajax.get("/product/getBaseCategoryList")
+// 发送请求获取轮播图中的数据
+export const reqSwiperListData = () => mockAjax.get('/swiper')
