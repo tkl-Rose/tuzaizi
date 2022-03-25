@@ -151,13 +151,14 @@ export default {
         filter: alpha(opacity=0);
         .item {
           width: 200px;
+          color: #fff;
           h3 {
             line-height: 30px;
             font-size: 14px;
             font-weight: 400;
             overflow: hidden;
             padding: 0 20px;
-            margin: 0;
+            margin: 4px 0;
 
             a {
               color: #333;

@@ -51,7 +51,7 @@ export default {
           loop: true, // 循环模式选项
           autoplay: true,
           observer: true,
-          delay: 2000,
+          delay: 3000,
           // 如果需要分页器
           pagination: {
             el: ".swiper-pagination",
@@ -74,7 +74,7 @@ export default {
   width: 1120px;
   height: 520px;
   position: relative;
-  left: 17%;
+  left: 17.5%;
 }
 .swiper-wrapper {
   width: 1120px;
@@ -87,5 +87,9 @@ export default {
 .swiper-button-prev {
   left: 20%;
   bottom: 20%;
+}
+.swiper-pagination {
+  left: 40%;
+  top: 95%;
 }
 </style>
