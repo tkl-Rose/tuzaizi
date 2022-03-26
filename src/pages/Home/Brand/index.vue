@@ -196,6 +196,9 @@ export default {
   z-index: 10000 !important;
   background-color: #fff;
 }
+.title {
+  font-size: 13px;
+}
 .cont {
   display: flex;
   width: 1500px;
