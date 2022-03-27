@@ -1,0 +1,58 @@
+[
+    {
+        "id":"1",
+        "name": "Redmi K50 Pro",
+        "text": "2k直屏的狠旗舰",
+        "price":"2999元",
+        "imgUrl":"/images/8.jpg"
+    },
+    {
+        "id":"2",
+        "name": "Redmi K50 ",
+        "text": "2k直屏的狠旗舰",
+        "price":"2399元",
+        "imgUrl":"/images/9.jpg"
+    },
+    {
+        "id":"3",
+        "name": "Redmi K40S ",
+        "text": "口碑真旗舰",
+        "price":"1799元",
+        "imgUrl":"/images/10.jpg"
+    },
+    {
+        "id":"4",
+        "name": "Redmi K50 电竞版",
+        "text": "全线拉满的冷血旗舰",
+        "price":"3299元",
+        "imgUrl":"/images/11.jpg"
+    },
+    {
+        "id":"5",
+        "name": "Xiaomi 12 Pro",
+        "text": "全新骁龙8|2k AMOLED屏幕",
+        "price":"4699元",
+        "imgUrl":"/images/13.jpg"
+    },
+    {
+        "id":"6",
+        "name": "Xiaomi 12",
+        "text": "全新骁龙8|5000万直摄",
+        "price":"3699元",
+        "imgUrl":"/images/14.jpg"
+    },
+    {
+        "id":"7",
+        "name": "Xiaomi 12X",
+        "text": "骁龙870|5000万主题",
+        "price":"2999元",
+        "imgUrl":"/images/15.jpg"
+    },
+    {
+        "id":"8",
+        "name": "Xiaomi 11",
+        "text": "轻薄5G 内外皆出彩",
+        "price":"1999元",
+        "imgUrl":"/images/17.jpg"
+    }
+]

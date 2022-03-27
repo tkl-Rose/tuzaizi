@@ -126,8 +126,9 @@ export default {};
   text-align: center;
   flex-direction: column;
 }
-.home-channel-list li :hover {
+.home-channel-list a :hover {
   color: #fff;
+  text-decoration: none;
 }
 .home-img {
   width: 24px;

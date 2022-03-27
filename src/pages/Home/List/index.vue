@@ -27,99 +27,15 @@
 
           <div class="right-one">
             <ul class="brick-list">
-              <li class="brick-item">
+              <li v-for="bar in barList" :key="bar.id" class="brick-item">
                 <a href="">
                   <div class="figure">
-                    <img src="../List/images/11.jpg" alt="" />
+                    <img :src="bar.imgUrl" alt="" />
                   </div>
-                  <h3 class="title-one">Redmi k50 Pro</h3>
-                  <p class="desc">2K直屏的狠旗舰</p>
+                  <h3 class="title-one">{{ bar.name }}</h3>
+                  <p class="desc">{{ bar.text }}</p>
                   <p class="price">
-                    <span class="num">2999元起</span>
-                  </p>
-                </a>
-              </li>
-              <li class="brick-item">
-                <a href="">
-                  <div class="figure">
-                    <img src="../List/images/11.jpg" alt="" />
-                  </div>
-                  <h3 class="title-one">Redmi k50 Pro</h3>
-                  <p class="desc">2K直屏的狠旗舰</p>
-                  <p class="price">
-                    <span class="num">2999元起</span>
-                  </p>
-                </a>
-              </li>
-              <li class="brick-item">
-                <a href="">
-                  <div class="figure">
-                    <img src="../List/images/11.jpg" alt="" />
-                  </div>
-                  <h3 class="title-one">Redmi k50 Pro</h3>
-                  <p class="desc">2K直屏的狠旗舰</p>
-                  <p class="price">
-                    <span class="num">2999元起</span>
-                  </p>
-                </a>
-              </li>
-              <li class="brick-item">
-                <a href="">
-                  <div class="figure">
-                    <img src="../List/images/11.jpg" alt="" />
-                  </div>
-                  <h3 class="title-one">Redmi k50 Pro</h3>
-                  <p class="desc">2K直屏的狠旗舰</p>
-                  <p class="price">
-                    <span class="num">2999元起</span>
-                  </p>
-                </a>
-              </li>
-              <li class="brick-item">
-                <a href="">
-                  <div class="figure">
-                    <img src="../List/images/11.jpg" alt="" />
-                  </div>
-                  <h3 class="title-one">Redmi k50 Pro</h3>
-                  <p class="desc">2K直屏的狠旗舰</p>
-                  <p class="price">
-                    <span class="num">2999元起</span>
-                  </p>
-                </a>
-              </li>
-              <li class="brick-item">
-                <a href="">
-                  <div class="figure">
-                    <img src="../List/images/11.jpg" alt="" />
-                  </div>
-                  <h3 class="title-one">Redmi k50 Pro</h3>
-                  <p class="desc">2K直屏的狠旗舰</p>
-                  <p class="price">
-                    <span class="num">2999元起</span>
-                  </p>
-                </a>
-              </li>
-              <li class="brick-item">
-                <a href="">
-                  <div class="figure">
-                    <img src="../List/images/11.jpg" alt="" />
-                  </div>
-                  <h3 class="title-one">Redmi k50 Pro</h3>
-                  <p class="desc">2K直屏的狠旗舰</p>
-                  <p class="price">
-                    <span class="num">2999元起</span>
-                  </p>
-                </a>
-              </li>
-              <li class="brick-item">
-                <a href="">
-                  <div class="figure">
-                    <img src="../List/images/11.jpg" alt="" />
-                  </div>
-                  <h3 class="title-one">Redmi k50 Pro</h3>
-                  <p class="desc">2K直屏的狠旗舰</p>
-                  <p class="price">
-                    <span class="num">2999元起</span>
+                    <span class="num">{{ bar.price }}</span>
                   </p>
                 </a>
               </li>
@@ -132,7 +48,15 @@
 </template>
 
 <script>
-export default {};
+import { mapState } from "vuex";
+export default {
+  computed: {
+    ...mapState("home", ["barList"]),
+  },
+  mounted() {
+    this.$store.dispatch("home/getBarListData");
+  },
+};
 </script>
 
 <style lang="less" scope>
@@ -179,7 +103,7 @@ export default {};
   text-align: center;
   line-height: 58px;
 
-  .a {
+  .more a {
     text-decoration: none;
   }
 }
@@ -201,6 +125,13 @@ export default {};
   width: 234px;
   height: 614px;
   background-color: #fff;
+  transition: bottom 0.2s linear 0s;
+  bottom: 0px;
+}
+.left-one img:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  bottom: 2px;
 }
 .right-one {
   display: flex;
@@ -223,6 +154,16 @@ export default {};
   align-items: center;
   text-align: center;
   background-color: #fff;
+  transition: bottom 0.2s linear 0s;
+  bottom: 0px;
+}
+.brick-item a:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  height: 300px;
+  width: 208px;
+  position: relative;
+  bottom: 2px;
+  text-decoration: none;
 }
 .title-one {
   font-size: 15px;

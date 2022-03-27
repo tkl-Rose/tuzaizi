@@ -3,6 +3,7 @@ import banner from './banner.json'
 // import或require引入的本地json文件中的数据会直接转换成对象
 import floors from './floors.json'
 import swiper from './swiper.json'
+import bar from './bar.json'
 import Mock from 'mockjs'
 // import axios from 'axios'
 
@@ -20,6 +21,10 @@ Mock.mock('/mock/floors', 'get', {
 Mock.mock('/mock/swiper', 'get', {
     code: 200,
     data: swiper
+})
+Mock.mock('/mock/bar', 'get', {
+    code: 200,
+    data: bar
 })
 
 // 3. 测试一下 是否好用
