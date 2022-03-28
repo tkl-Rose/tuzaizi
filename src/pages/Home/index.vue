@@ -10,6 +10,8 @@
     <Recommend></Recommend>
 
     <List></List>
+
+    <Floors></Floors>
   </div>
 </template>
 
@@ -19,6 +21,7 @@ import TypeNav from "./TypeNav";
 import Swiper from "./Swiper";
 import Recommend from "./Recommend";
 import List from "./List";
+import Floors from "./Floors";
 export default {
   components: {
     Brand,
@@ -26,6 +29,7 @@ export default {
     Swiper,
     Recommend,
     List,
+    Floors,
   },
 };
 </script>

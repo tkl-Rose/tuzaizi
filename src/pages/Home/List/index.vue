@@ -66,7 +66,7 @@ export default {
 }
 .con {
   width: 1260px;
-  height: 8000px;
+  // height: 8000px;
   margin-left: 230px;
 }
 .home-banner-box {
