@@ -1,35 +1,55 @@
 [{
   "id": "001",
-  "name": "家用电器",
-  "keywords": ["节能补贴", "4K电视", "空气净化器", "IH电饭煲", "滚筒洗衣机", "电热水器"],
-  "imgUrl": "/images/floor-1-1.png",
+  "name": ["智能穿戴"],
+  "keywords":["热门"],
+  "text":["穿戴"],
+  "imgUrl":"/images/25.jpg",
   "navList": [{
-          "url": "#",
-          "text": "热门"
+      "imgUrl":"/images/26.jpg",
+      "name": "Xiaomi Watch S1",
+      "text": "腕事具备",
+      "price":"1099元"
       },
       {
-          "url": "#",
-          "text": "大家电"
+        "imgUrl":"/images/27.jpg",
+        "name": "Xiaomi真无线降噪耳机3",
+        "text": "静听好声音",
+        "price":"459元"
       },
       {
-          "url": "#",
-          "text": "生活电器"
+        "imgUrl":"/images/28.jpg",
+        "name": "Redmi手表2",
+        "text": "AMOLEDGA高清大屏",
+        "price":"399元"
       },
       {
-          "url": "#",
-          "text": "厨房电器"
+        "imgUrl":"/images/29.jpg",
+        "name": "小米手环6 NFC版",
+        "text": "全屏实力",
+        "price":"249元"
       },
       {
-          "url": "#",
-          "text": "应季电器"
+        "imgUrl":"/images/30.jpg",
+        "name": "Redmi 手表",
+        "text": "35g超径/1.4大屏/多功能NFC/7天",
+        "price":"299元"
       },
       {
-          "url": "#",
-          "text": "空气/净水"
+        "imgUrl":"/images/31.jpg",
+        "name": "Xiaomi真无线降噪耳机3pro",
+        "text": "动态降噪 静听曼妙",
+        "price":"699元"
       },
       {
-          "url": "#",
-          "text": "高端电器"
+        "imgUrl":"/images/32.jpg",
+        "name": "Redmi Buds 3半入耳真无线蓝牙",
+        "text": "轻巧半入耳，舒适有天分",
+        "price":"199元"
+      },
+      {
+        "imgUrl":"/images/33.jpg",
+        "name": "Redmi Buds 3青春版",
+        "price":"99元"
       }
   ],
   "carouselList": [{
