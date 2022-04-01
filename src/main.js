@@ -10,6 +10,12 @@ import './common/common.scss'
 // 引入swiper样式文件
 import 'swiper/css/swiper.min.css'
 
+//引入vue视频插件
+import VideoPlayer from 'vue-video-player'
+require('video.js/dist/video-js.css')
+require('vue-video-player/src/custom-theme.css')
+Vue.use(VideoPlayer)
+
 //element-ui的按需引入
 import {
   Button,

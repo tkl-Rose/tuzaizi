@@ -45,12 +45,8 @@
         "name": "Redmi Buds 3半入耳真无线蓝牙",
         "text": "轻巧半入耳，舒适有天分",
         "price":"199元"
-      },
-      {
-        "imgUrl":"/images/33.jpg",
-        "name": "Redmi Buds 3青春版",
-        "price":"99元"
       }
+     
   ]
 },
 {
@@ -84,37 +80,24 @@
         "price":"4499元"
       },
       {
-          "url": "#",
-          "text": "应季电器2"
+        "imgUrl":"/images/45.jpg",
+        "name": "Redmibook Book Pro 14 2022",
+        "text": "全新12代英特尔处理器 CNC一体精",
+        "price":"5399元"
       },
       {
-          "url": "#",
-          "text": "空气/净水2"
+        "imgUrl":"/images/46.jpg",
+        "name": "小米平板5 Pro",
+        "text": "11英寸大屏12.5k超清显示",
+        "price":"2399元"
       },
       {
-          "url": "#",
-          "text": "高端电器2"
+        "imgUrl":"/images/47.jpg",
+        "name": "Redmi Pro R5 16G 512",
+        "text": "2.5k超视网膜全面屏Pro",
+        "price":"4199元"
       }
-  ],
-  "carouselList": [{
-          "id": "0011",
-          "imgUrl": "/images/floor-1-b01.png"
-      },
-      {
-          "id": "0012",
-          "imgUrl": "/images/floor-1-b02.png"
-      },
-      {
-          "id": "0013",
-          "imgUrl": "/images/floor-1-b03.png"
-      }
-  ],
-  "recommendList": [
-      "/images/floor-1-2.png",
-      "/images/floor-1-3.png",
-      "/images/floor-1-5.png",
-      "/images/floor-1-6.png"
-  ],
-  "bigImg": "/images/floor-1-4.png"
+
+  ]
 }
 ]

@@ -10,7 +10,8 @@ import {
     reqCategoryListData,
     reqBannerListData,
     reqSwiperListData,
-    reqBarListData
+    reqBarListData,
+    reqFloorsListData
 } from '@/api'
 
 const state = {
@@ -21,7 +22,9 @@ const state = {
     //轮播图数据
     swiperList: [],
     //手机列表的数据
-    barList: []
+    barList: [],
+    //商品列表得数据
+    floorsList: []
 }
 const actions = {
     // 可以做异步操作
@@ -72,6 +75,18 @@ const actions = {
         } else {
             console.log(result.message);
         }
+    },
+
+    //5.商品列表得数据
+    async getFloorsListData({
+        commit
+    }) {
+        const result = await reqFloorsListData()
+        if (result.code === 200) {
+            commit('SAVE_FLOORS_LIST_DATA', result.data)
+        } else {
+            console.log(result.message);
+        }
     }
 }
 const mutations = {
@@ -89,6 +104,10 @@ const mutations = {
     //4.将手机的数据存入state中
     SAVE_BAR_LIST_DATA(state, payload) {
         state.barList = payload
+    },
+    //5.将商品数据存入state中
+    SAVE_FLOORS_LIST_DATA(state, payload) {
+        state.floorsList = payload
     }
 }
 const getters = {}

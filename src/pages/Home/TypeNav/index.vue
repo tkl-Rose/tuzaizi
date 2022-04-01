@@ -161,7 +161,7 @@ export default {
             margin: 4px 0;
 
             a {
-              color: #333;
+              color: #90be8f;
             }
           }
 

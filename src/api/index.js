@@ -14,3 +14,5 @@ export const reqCategoryListData = () => ajax.get("/product/getBaseCategoryList"
 export const reqSwiperListData = () => mockAjax.get('/swiper')
 //发送请求获取手机列表的数据
 export const reqBarListData = () => mockAjax.get('/bar')
+//发送请求获取商品列表得数据
+export const reqFloorsListData = () => mockAjax.get('/floors')
