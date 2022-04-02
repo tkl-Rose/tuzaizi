@@ -80,7 +80,40 @@
         <ul class="video-list">
           <li class="video-item">
             <a href="">
-              <div class="figure">
+              <div class="figure1">
+                <img src="../Floors/images/50.jpg" alt="" />
+                <span @click.prevent="showCont" class="play">
+                  <img class="play-img" src="../Floors/images/52.png" alt="" />
+                </span>
+                <h3 class="title-too">2021年春季新品发布会第一场</h3>
+              </div>
+            </a>
+          </li>
+          <li class="video-item">
+            <a href="">
+              <div class="figure1">
+                <img src="../Floors/images/50.jpg" alt="" />
+                <span @click.prevent="showCont" class="play">
+                  <img class="play-img" src="../Floors/images/52.png" alt="" />
+                </span>
+                <h3 class="title-too">2021年春季新品发布会第一场</h3>
+              </div>
+            </a>
+          </li>
+          <li class="video-item">
+            <a href="">
+              <div class="figure1">
+                <img src="../Floors/images/50.jpg" alt="" />
+                <span @click.prevent="showCont" class="play">
+                  <img class="play-img" src="../Floors/images/52.png" alt="" />
+                </span>
+                <h3 class="title-too">2021年春季新品发布会第一场</h3>
+              </div>
+            </a>
+          </li>
+          <li class="video-item">
+            <a href="">
+              <div class="figure1">
                 <img src="../Floors/images/50.jpg" alt="" />
                 <span @click.prevent="showCont" class="play">
                   <img class="play-img" src="../Floors/images/52.png" alt="" />
@@ -166,7 +199,7 @@ export default {
 
 <style lang="less" scope>
 .appid {
-  height: 8000px;
+  height: 1800px;
   background-color: #f5f5f5;
 }
 .floos-one {
@@ -246,6 +279,7 @@ export default {
   bottom: 2px;
 }
 .home-video-box {
+  // display: flex;
   width: 1226px;
   height: 357px;
   margin-left: 300px;
@@ -257,8 +291,8 @@ export default {
 }
 
 .box-video {
-  display: flex;
-  width: 1226px;
+  display: inline-block;
+  width: 826px;
   height: 280px;
 }
 .video-item {
@@ -267,16 +301,21 @@ export default {
   background-color: #fff;
   text-align: center;
 }
-.figure {
+.video-list {
+  display: flex;
   width: 296px;
-  height: 180px;
+  height: 280px;
+}
+.figure1 {
+  width: 296px;
+  height: 280px;
 }
 .play {
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 325px;
+  left: 330px;
   bottom: -291%;
   width: 30px;
   height: 20px;
