@@ -12,6 +12,8 @@
     <List></List>
 
     <Floors></Floors>
+
+    <Sidebar></Sidebar>
   </div>
 </template>
 
@@ -22,6 +24,7 @@ import Swiper from "./Swiper";
 import Recommend from "./Recommend";
 import List from "./List";
 import Floors from "./Floors";
+import Sidebar from "./Sidebar";
 export default {
   components: {
     Brand,
@@ -30,6 +33,7 @@ export default {
     Recommend,
     List,
     Floors,
+    Sidebar,
   },
 };
 </script>
