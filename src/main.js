@@ -23,13 +23,15 @@ import {
   Message,
   Input,
   Autocomplete,
-  Carousel
+  Carousel,
+  Backtop
 } from 'element-ui';
 // Vue.component(Button.name, Button);    上线两种形式一样
 Vue.use(Button)
 Vue.use(Input)
 Vue.use(Autocomplete)
 Vue.use(Carousel)
+Vue.use(Backtop)
 
 //这就是第二类组件的注册方式
 Vue.prototype.$msgbox = MessageBox;

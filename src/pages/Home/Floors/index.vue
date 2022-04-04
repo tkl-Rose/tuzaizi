@@ -335,7 +335,7 @@ export default {
 .video-box {
   position: absolute;
   left: 25%;
-  bottom: -330%;
+  bottom: -310%;
   width: 800px;
   height: 520px;
 }
