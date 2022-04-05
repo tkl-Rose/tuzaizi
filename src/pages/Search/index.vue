@@ -1,72 +1,84 @@
 <template>
-  <div id="app">
-    <div class="container">
-      <div class="header-logo">
-        <img src="../Brand/images/1(1).jpg" alt="" />
+  <div>
+    <div id="app">
+      <div class="container">
+        <div class="header-logo">
+          <img src="../Search/images/3.jpg" alt="" />
+        </div>
+        <div class="header-nav">
+          <ul @mouseenter="enter" @mouseleave="leave" class="nav-list">
+            <li class="nav-item">
+              <a href="" class="text">手办模玩</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="text">服饰配饰</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="text">礼包福袋</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="text">挂件摆件</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="text">3C数码</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="text">日用百货</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="text">社区</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="text">服务</a>
+            </li>
+          </ul>
+          <div class="header-search">
+            <el-autocomplete
+              popper-class="my-autocomplete"
+              v-model="state"
+              :fetch-suggestions="querySearch"
+              placeholder="请输入内容"
+              @select="handleSelect"
+            >
+              <el-button
+                @click="btnSearch"
+                slot="append"
+                icon="el-icon-search"
+              ></el-button>
+              <template slot-scope="{ item }">
+                <div class="name">{{ item.value }}</div>
+                <span class="addr">{{ item.address }}</span>
+              </template>
+            </el-autocomplete>
+          </div>
+        </div>
       </div>
-      <div class="header-nav">
-        <ul @mouseenter="enter" @mouseleave="leave" class="nav-list">
-          <li class="nav-item">
-            <a href="" class="text">手办模玩</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="text">服饰配饰</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="text">礼包福袋</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="text">挂件摆件</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="text">3C数码</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="text">日用百货</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="text">社区</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="text">服务</a>
-          </li>
-        </ul>
-        <div class="header-search">
-          <el-autocomplete
-            popper-class="my-autocomplete"
-            v-model="state"
-            :fetch-suggestions="querySearch"
-            placeholder="请输入内容"
-            @select="handleSelect"
-          >
-            <el-button
-              @click="btnSearch"
-              slot="append"
-              icon="el-icon-search"
-            ></el-button>
-            <template slot-scope="{ item }">
-              <div class="name">{{ item.value }}</div>
-              <span class="addr">{{ item.address }}</span>
-            </template>
-          </el-autocomplete>
+      <transition name="fade">
+        <div v-show="seen" class="item-children">
+          <div class="cont">
+            <ul class="children-list">
+              <li v-for="banner in bannerList" :key="banner.id" class="first">
+                <img :src="banner.imgUrl" alt="" />
+                <div class="title">
+                  {{ banner.name }}
+                </div>
+                <p class="price">{{ banner.price }}</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </transition>
+    </div>
+
+    <div class="container-main">
+      <div class="breadcrumbs">
+        <div class="breadcrumbs-container">
+          <a href="">首页 ></a>
+          <a class="breadcrumbs-container-in" href="">全部结果 ></a>
+          <span>小米手机</span>
         </div>
       </div>
     </div>
-    <transition name="fade">
-      <div v-show="seen" class="item-children">
-        <div class="cont">
-          <ul class="children-list">
-            <li v-for="banner in bannerList" :key="banner.id" class="first">
-              <img :src="banner.imgUrl" alt="" />
-              <div class="title">
-                {{ banner.name }}
-              </div>
-              <p class="price">{{ banner.price }}</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </transition>
   </div>
 </template>
 
@@ -261,5 +273,24 @@ export default {
 .fade-leave-active,
 .fade-enter-active {
   transition: 0.5s all ease;
+}
+.container-main {
+  width: 100%;
+  height: 2069px;
+}
+.breadcrumbs {
+  width: 100%;
+  height: 40px;
+  background-color: #f5f5f5;
+}
+.breadcrumbs-container {
+  height: 40px;
+  line-height: 40px;
+  width: 1120px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.breadcrumbs-container-in {
+  margin: 0 10px;
 }
 </style>
