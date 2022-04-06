@@ -78,6 +78,152 @@
           <span>小米手机</span>
         </div>
       </div>
+
+      <div class="search-filter">
+        <div class="filter-wrap">
+          <div class="filter-list">
+            <ul class="item-show">
+              <span class="label">分类:</span>
+              <li class="active">
+                <a href="">全部</a>
+              </li>
+              <li class="active">
+                <a href="">黑鲨手机</a>
+              </li>
+              <li class="active">
+                <a href="">手机饰品</a>
+              </li>
+              <li class="active">
+                <a href="">手机饰品</a>
+              </li>
+              <li class="active">
+                <a href="">手机其他配件</a>
+              </li>
+              <li class="active">
+                <a href="">游戏手机配件</a>
+              </li>
+              <li class="active">
+                <a href="">手机壳套</a>
+              </li>
+              <span class="more-btn">
+                更多
+                <img class="more-img" src="../Search/images/62.png" alt="" />
+              </span>
+            </ul>
+            <ul class="item-show">
+              <span class="label">拍照像素:</span>
+              <li class="active">
+                <a href="">三摄像头</a>
+              </li>
+            </ul>
+            <ul class="item-show">
+              <span class="label">屏幕大小:</span>
+              <li class="active">
+                <a href="">超大屏</a>
+              </li>
+            </ul>
+            <ul class="item-show">
+              <span class="label">运行内存:</span>
+              <li class="active">
+                <a href="">极速畅玩</a>
+              </li>
+              <li class="active">
+                <a href="">实用</a>
+              </li>
+            </ul>
+            <ul class="item-show">
+              <span class="label">电池续航:</span>
+              <li class="active">
+                <a href="">超长待机</a>
+              </li>
+            </ul>
+            <ul class="item-show">
+              <span class="label">高级选项:</span>
+              <li class="active">
+                <a href="">cpu型号</a>
+                <img class="more-img" src="../Search/images/62.png" alt="" />
+              </li>
+              <li class="active">
+                <a href="">cpu主频</a>
+                <img class="more-img" src="../Search/images/62.png" alt="" />
+              </li>
+              <li class="active">
+                <a href="">前置摄像头</a>
+                <img class="more-img" src="../Search/images/62.png" alt="" />
+              </li>
+              <li class="active">
+                <a href="">屏幕分辨率</a>
+                <img class="more-img" src="../Search/images/62.png" alt="" />
+              </li>
+              <li class="active">
+                <a href="">存储容量</a>
+                <img class="more-img" src="../Search/images/62.png" alt="" />
+              </li>
+              <li class="active">
+                <a href="">独立AI键</a>
+                <img class="more-img" src="../Search/images/62.png" alt="" />
+              </li>
+              <li class="active">
+                <a href="">机身厚度</a>
+                <img class="more-img" src="../Search/images/62.png" alt="" />
+              </li>
+
+              <span class="more-btn">
+                更多
+                <img class="more-img" src="../Search/images/62.png" alt="" />
+              </span>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-result">
+        <div class="result-order">
+          <div class="order-list-box">
+            <ul class="order-list">
+              <li class="order-item">
+                <a href="">综合</a>
+              </li>
+              <li class="order-item">
+                <a href="">新品</a>
+              </li>
+              <li class="order-item">
+                <a href="">销量</a>
+              </li>
+              <li class="order-item">
+                <a href="">价格</a>
+              </li>
+            </ul>
+
+            <ul class="type-list">
+              <li>
+                <div class="address-choose">
+                  <span>收货地</span>
+                  <a href="">
+                    <span>北京 北京市</span>
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <a href="">
+                  <el-checkbox v-model="checked">促销</el-checkbox></el-checkbox>
+                </a>
+              </li>
+                <li>
+                <a href="">
+                  <el-checkbox v-model="checked">分期</el-checkbox></el-checkbox>
+                </a>
+              </li>
+               <li>
+                <a href="">
+                  <el-checkbox v-model="checked">仅看有货</el-checkbox></el-checkbox></el-checkbox>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -90,6 +236,7 @@ export default {
       restaurants: [],
       state: "",
       seen: false,
+      checked: false,
     };
   },
   mounted() {
@@ -292,5 +439,59 @@ export default {
 }
 .breadcrumbs-container-in {
   margin: 0 10px;
+}
+.search-filter {
+  width: 1332px;
+  height: 329px;
+  background-color: #fff;
+}
+.filter-wrap {
+  margin-left: 305px;
+  width: 1126px;
+  padding: 18px 0;
+}
+.filter-list {
+  width: 1126px;
+}
+.item-show {
+  display: flex;
+
+  width: 1226px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  border-bottom: 1px solid #ededed;
+}
+.label {
+  top: 0;
+  left: 0;
+  color: #b0b0b0;
+}
+.active {
+  width: 148px;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #424242;
+}
+.active a:hover {
+  text-decoration: none;
+  color: red;
+}
+.more-btn {
+  position: relative;
+  // left: 10%;
+  width: 46px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  color: #757575;
+  right: 0;
+  top: 0;
+}
+.more-img {
+  position: relative;
+  top: 5%;
 }
 </style>

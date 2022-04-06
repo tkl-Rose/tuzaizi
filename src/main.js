@@ -18,6 +18,7 @@ Vue.use(VideoPlayer)
 
 //element-ui的按需引入
 import {
+  Checkbox,
   Button,
   MessageBox,
   Message,
@@ -32,6 +33,7 @@ Vue.use(Input)
 Vue.use(Autocomplete)
 Vue.use(Carousel)
 Vue.use(Backtop)
+Vue.use(Checkbox)
 
 //这就是第二类组件的注册方式
 Vue.prototype.$msgbox = MessageBox;
