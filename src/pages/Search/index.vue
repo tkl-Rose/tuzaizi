@@ -192,35 +192,48 @@
               </li>
               <li class="order-item">
                 <a href="">价格</a>
+                <img class="order-item-img" src="../Search/images/63.png" alt="">
               </li>
             </ul>
 
             <ul class="type-list">
               <li>
                 <div class="address-choose">
-                  <span>收货地</span>
+                  <span class="label">收货地 :</span>
                   <a href="">
-                    <span>北京 北京市</span>
+                    <span class="address">北京 北京市</span>
                   </a>
                 </div>
               </li>
 
               <li>
-                <a href="">
+                <a class="checkbox" href="">
                   <el-checkbox v-model="checked">促销</el-checkbox></el-checkbox>
                 </a>
               </li>
                 <li>
-                <a href="">
+                <a class="checkbox"  href="">
                   <el-checkbox v-model="checked">分期</el-checkbox></el-checkbox>
                 </a>
               </li>
                <li>
-                <a href="">
+                <a class="checkbox" href="">
                   <el-checkbox v-model="checked">仅看有货</el-checkbox></el-checkbox></el-checkbox>
                 </a>
               </li>
             </ul>
+          </div>
+          <div class="goods-list-box">
+            <div class="goods-list">
+               <div class="goods-item">
+                 <a href="">
+                   <div class="figure">
+                     <img src="" alt="">
+                   </div>
+                 </a>
+               </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -494,4 +507,68 @@ export default {
   position: relative;
   top: 5%;
 }
+.search-result{
+  padding: 20px 0 100px;
+  background-color: #f5f5f5;
+  height: 1222px;
+}
+.result-order{
+  width: 1226px;
+  margin-left: 300px;
+}
+.order-list-box{
+  // display: flex;
+  width: 1130px;
+  height: 30px;
+  justify-content: space-between;
+}
+.order-list{
+ float: left;
+  display: flex;
+  height: 30px;
+  line-height: 30px;
+}
+.order-list a:hover{
+  color: red;
+  text-decoration: none;
+}
+.order-item{
+  width: 88px;
+  height: 30px;
+  margin: 0 10px;
+  border-right: 1px solid #e0e0e0;
+  font-weight: 700;
+  font-size: 14px;
+}
+.order-item-img{
+  position: relative;
+  top: 10%;
+}
+.type-list{
+  float: right;
+  display: flex;
+  height: 30px;
+  line-height: 30px;
+}
+.address-choose{
+  color: #424242;
+}
+.address{
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #e3e3e3;
+    height: 14px;
+    line-height: 14px;
+    padding: 7px 14px;
+    cursor: pointer;
+}
+.checkbox{
+    display: inline-block;
+    margin-right: 8px;
+    margin-left: 8px;
+    line-height: 18px;
+    text-align: center;
+}
+
 </style>
