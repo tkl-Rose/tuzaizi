@@ -228,15 +228,31 @@
                <div class="goods-item">
                  <a href="">
                    <div class="figure">
-                     <img src="" alt="">
+                     <img class="figure-img" src="../Search/images/64.png" alt="">
+                     <h2 class="figure-title">黑鲨5 12GB+128GB</h2>
+                     <p class="price">
+                       <span>2999元</span>
+                     </p>
+                   </div>
+
+                   <div class="flags">
+                      <img class="flags-img" src="../Search/images/65.png" alt="">
                    </div>
                  </a>
                </div>
             </div>
-
+          
+<div class="block">
+  <span class="demonstration">大于 7 页时的效果</span>
+  <el-pagination
+    layout="prev, pager, next"
+    :total="1000">
+  </el-pagination>
+</div>
           </div>
         </div>
       </div>
+ 
     </div>
   </div>
 </template>
@@ -507,32 +523,32 @@ export default {
   position: relative;
   top: 5%;
 }
-.search-result{
+.search-result {
   padding: 20px 0 100px;
   background-color: #f5f5f5;
   height: 1222px;
 }
-.result-order{
+.result-order {
   width: 1226px;
   margin-left: 300px;
 }
-.order-list-box{
+.order-list-box {
   // display: flex;
   width: 1130px;
   height: 30px;
   justify-content: space-between;
 }
-.order-list{
- float: left;
+.order-list {
+  float: left;
   display: flex;
   height: 30px;
   line-height: 30px;
 }
-.order-list a:hover{
+.order-list a:hover {
   color: red;
   text-decoration: none;
 }
-.order-item{
+.order-item {
   width: 88px;
   height: 30px;
   margin: 0 10px;
@@ -540,35 +556,75 @@ export default {
   font-weight: 700;
   font-size: 14px;
 }
-.order-item-img{
+.order-item-img {
   position: relative;
   top: 10%;
 }
-.type-list{
+.type-list {
   float: right;
   display: flex;
   height: 30px;
   line-height: 30px;
 }
-.address-choose{
+.address-choose {
   color: #424242;
 }
-.address{
-    position: relative;
-    display: inline-block;
-    background: #fff;
-    border: 1px solid #e3e3e3;
-    height: 14px;
-    line-height: 14px;
-    padding: 7px 14px;
-    cursor: pointer;
+.address {
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  height: 14px;
+  line-height: 14px;
+  padding: 7px 14px;
+  cursor: pointer;
 }
-.checkbox{
-    display: inline-block;
-    margin-right: 8px;
-    margin-left: 8px;
-    line-height: 18px;
-    text-align: center;
+.checkbox {
+  display: inline-block;
+  margin-right: 8px;
+  margin-left: 8px;
+  line-height: 18px;
+  text-align: center;
 }
+.goods-list-box {
+  width: 1226px;
+  margin-top: 20px;
+}
+.goods-list {
+  display: flex;
+  width: 1240px;
 
+  margin: 0;
+}
+.goods-item {
+  width: 296px;
+  height: 430px;
+  margin-right: 14px;
+  margin-bottom: 14px;
+  text-align: center;
+  background-color: #fff;
+}
+.figure-img {
+  width: 200px;
+  height: 200px;
+  padding-top: 30px;
+}
+.figure-title {
+  font-size: 14px;
+  margin: 0 auto;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.price {
+  color: red;
+}
+.flags {
+  margin-top: 10px;
+}
+.flags-img {
+  width: 56px;
+  height: 18px;
+  margin-top: 20px;
+}
 </style>
