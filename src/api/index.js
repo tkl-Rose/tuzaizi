@@ -16,3 +16,5 @@ export const reqSwiperListData = () => mockAjax.get('/swiper')
 export const reqBarListData = () => mockAjax.get('/bar')
 //发送请求获取商品列表得数据
 export const reqFloorsListData = () => mockAjax.get('/floors')
+// 5. 获取搜索的商品数据
+export const reqSearchInfoData = (searchParams) => ajax.post('/list', searchParams)

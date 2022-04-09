@@ -242,13 +242,13 @@
                </div>
             </div>
           
-<div class="block">
-  <span class="demonstration">大于 7 页时的效果</span>
-  <el-pagination
-    layout="prev, pager, next"
-    :total="1000">
-  </el-pagination>
-</div>
+            <!-- <div class="block">
+            <span class="demonstration">大于 7 页时的效果</span>
+           <el-pagination
+               layout="prev, pager, next"
+           :total="1000">
+          </el-pagination>
+         </div> -->
           </div>
         </div>
       </div>
@@ -258,10 +258,14 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapGetters, mapState } from "vuex";
 export default {
   data() {
     return {
+        category1Id: "", // 一级分类id
+        category2Id: "", // 二级分类id
+        category3Id: "", // 三级分类id
+        categoryName: "", // 分类id对应的分类名称
       restaurants: [],
       state: "",
       seen: false,
@@ -277,6 +281,7 @@ export default {
 
     //派发任务获取数据
     this.$store.dispatch("home/getBannerListData");
+    this.$store.dispatch("search/getSearchInfoData");
   },
   beforeDestroy() {
     //在组件销毁之前，一定要清除之前事件总线注册的事件
@@ -284,6 +289,7 @@ export default {
   },
   computed: {
     ...mapState("home", ["bannerList"]),
+    ...mapGetters('search',['trademarkList','attrsList'])
   },
   methods: {
     querySearch(queryString, cb) {

@@ -2,6 +2,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import home from './modules/home'
+import search from './modules/search'
 
 // 2. 注册插件
 Vue.use(Vuex)
@@ -25,6 +26,7 @@ const store = new Vuex.Store({
   getters,
   modules: {
     home,
+    search
   } // 和store对象关联起来  类似于组件注册
 })
 
