@@ -15,9 +15,8 @@ const actions = {
     // 1. 获取搜索商品的数据
     async getSearchInfoData({
         commit
-    }, searchParams) {
-        const result = await reqSearchInfoData(searchParams)
-        // console.log('searchActions',result);
+    }) {
+        const result = await reqSearchInfoData()
         if (result.code === 200) {
             commit('SAVE_SEARCK_INFO_DATA', result.data)
         } else {

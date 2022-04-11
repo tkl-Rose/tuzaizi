@@ -2,9 +2,11 @@
   <div>
     <div id="app">
       <div class="container">
-        <div class="header-logo">
+        <router-link to="home" class="header-logo">
           <img src="../Search/images/3.jpg" alt="" />
-        </div>
+          </router-link> 
+          
+        
         <div class="header-nav">
           <ul @mouseenter="enter" @mouseleave="leave" class="nav-list">
             <li class="nav-item">
@@ -225,6 +227,81 @@
           </div>
           <div class="goods-list-box">
             <div class="goods-list">
+               <div  class="goods-item">
+                 <a href="../Detail">
+                   <div class="figure">
+                     <img class="figure-img" src="../Search/images/64.png" alt="">
+                     <h2 class="figure-title">黑鲨5 12GB+128GB</h2>
+                     <p class="price">
+                       <span>2999元</span>
+                     </p>
+                   </div>
+
+                   <div class="flags">
+                      <img class="flags-img" src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1616411533.54846931.png" alt="">
+                   </div>
+                 </a>
+               </div>
+                <div class="goods-item">
+                 <a href="">
+                   <div class="figure">
+                     <img class="figure-img" src="../Search/images/64.png" alt="">
+                     <h2 class="figure-title">黑鲨5 12GB+128GB</h2>
+                     <p class="price">
+                       <span>2999元</span>
+                     </p>
+                   </div>
+
+                   <div class="flags">
+                      <img class="flags-img" src="../Search/images/65.png" alt="">
+                   </div>
+                 </a>
+               </div>
+                <div class="goods-item">
+                 <a href="">
+                   <div class="figure">
+                     <img class="figure-img" src="../Search/images/64.png" alt="">
+                     <h2 class="figure-title">黑鲨5 12GB+128GB</h2>
+                     <p class="price">
+                       <span>2999元</span>
+                     </p>
+                   </div>
+
+                   <div class="flags">
+                      <img class="flags-img" src="../Search/images/65.png" alt="">
+                   </div>
+                 </a>
+               </div>
+                <div class="goods-item">
+                 <a href="">
+                   <div class="figure">
+                     <img class="figure-img" src="../Search/images/64.png" alt="">
+                     <h2 class="figure-title">黑鲨5 12GB+128GB</h2>
+                     <p class="price">
+                       <span>2999元</span>
+                     </p>
+                   </div>
+
+                   <div class="flags">
+                      <img class="flags-img" src="../Search/images/65.png" alt="">
+                   </div>
+                 </a>
+               </div>
+                <div class="goods-item">
+                 <a href="">
+                   <div class="figure">
+                     <img class="figure-img" src="../Search/images/64.png" alt="">
+                     <h2 class="figure-title">黑鲨5 12GB+128GB</h2>
+                     <p class="price">
+                       <span>2999元</span>
+                     </p>
+                   </div>
+
+                   <div class="flags">
+                      <img class="flags-img" src="../Search/images/65.png" alt="">
+                   </div>
+                 </a>
+               </div>
                <div class="goods-item">
                  <a href="">
                    <div class="figure">
@@ -242,13 +319,13 @@
                </div>
             </div>
           
-            <!-- <div class="block">
-            <span class="demonstration">大于 7 页时的效果</span>
+            <div class="block">
+            <span class="demonstration"></span>
            <el-pagination
                layout="prev, pager, next"
            :total="1000">
           </el-pagination>
-         </div> -->
+         </div>
           </div>
         </div>
       </div>
@@ -258,14 +335,15 @@
 </template>
 
 <script>
-import { mapGetters, mapState } from "vuex";
+import {  mapState } from "vuex";
 export default {
+   name: "Detail",
   data() {
     return {
-        category1Id: "", // 一级分类id
-        category2Id: "", // 二级分类id
-        category3Id: "", // 三级分类id
-        categoryName: "", // 分类id对应的分类名称
+        // category1Id: "", // 一级分类id
+        // category2Id: "", // 二级分类id
+        // category3Id: "", // 三级分类id
+        // categoryName: "", // 分类id对应的分类名称
       restaurants: [],
       state: "",
       seen: false,
@@ -289,7 +367,6 @@ export default {
   },
   computed: {
     ...mapState("home", ["bannerList"]),
-    ...mapGetters('search',['trademarkList','attrsList'])
   },
   methods: {
     querySearch(queryString, cb) {
@@ -458,7 +535,7 @@ export default {
 }
 .container-main {
   width: 100%;
-  height: 2069px;
+  height: 1500px;
 }
 .breadcrumbs {
   width: 100%;
@@ -532,7 +609,7 @@ export default {
 .search-result {
   padding: 20px 0 100px;
   background-color: #f5f5f5;
-  height: 1222px;
+  height: 1002px;
 }
 .result-order {
   width: 1226px;
@@ -540,7 +617,7 @@ export default {
 }
 .order-list-box {
   // display: flex;
-  width: 1130px;
+  width: 1230px;
   height: 30px;
   justify-content: space-between;
 }
@@ -598,6 +675,7 @@ export default {
 }
 .goods-list {
   display: flex;
+  flex-wrap: wrap;
   width: 1240px;
 
   margin: 0;
@@ -609,6 +687,13 @@ export default {
   margin-bottom: 14px;
   text-align: center;
   background-color: #fff;
+  transition: bottom 0.2s linear 0s;
+  bottom: 0px;
+}
+.goods-item a:hover{
+  text-decoration: none;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 .figure-img {
   width: 200px;
@@ -632,5 +717,10 @@ export default {
   width: 56px;
   height: 18px;
   margin-top: 20px;
+}
+.block{
+  
+  margin: 100px 0 0 200px;
+  background-color: #f5f5f5;
 }
 </style>

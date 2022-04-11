@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 
 
+
 //css样式引入
 import './common/common.scss'
 
@@ -49,6 +50,8 @@ import './mock/mockServer' // 引入进来之后开启服务器  相当于已经
 import * as API from '@/api'
 
 Vue.config.productionTip = false
+
+
 
 
 
