@@ -46,9 +46,13 @@ export default {
       // 这个数据发生变化指的是bannerList由原来的空数组变成存有真正数据的数组
       // this.$nextTick 可以保证页面中的数据是最新的
       this.$nextTick(() => {
-        var mySwiper = new Swiper(".banner-container", {
+        var mySwiper = new Swiper(".swiper-container", {
           // direction: "vertical", // 垂直切换选项
           loop: true, // 循环模式选项
+          effect: "fade",
+          fadeEffect: {
+            crossFade: true,
+          },
           autoplay: true,
           observer: true,
           delay: 3000,

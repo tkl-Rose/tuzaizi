@@ -98,7 +98,26 @@
       <div class="product-box">
         <div class="img-left">
           <div class="swiper-container">
-              
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="img" src="../Detail/images/70.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img class="img" src="../Detail/images/71.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img class="img" src="../Detail/images/72.png" alt="" />
+              </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- 如果需要滚动条 -->
+            <!--    <div class="swiper-scrollbar"></div>-->
           </div>
         </div>
       </div>
@@ -107,6 +126,7 @@
 </template>
 
 <script>
+import Swiper from "swiper";
 import { mapState } from "vuex";
 export default {
   data() {
@@ -117,6 +137,29 @@ export default {
     };
   },
   mounted() {
+    var swiper = new Swiper(".swiper-container", {
+      loop: true, //无缝轮播
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+      // 如果需要分页器
+      pagination: ".swiper-pagination",
+      // 如果需要前进后退按钮
+      nextButton: ".swiper-button-next",
+      prevButton: ".swiper-button-prev",
+      mousewheelControl: true, //开启鼠标滚轮控制
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      // 如果需要滚动条
+      // scrollbar: '.swiper-scrollbar',
+      //如果需要自动切换海报
+      autoplay: {
+        delay: 3000, //时间 毫秒
+        disableOnInteraction: false, //用户操作之后是否停止自动轮播默认true
+      },
+    });
     //给全局事件总线注册一个事件
     this.$bus.$on("remove-state", () => {
       this.state = "";
@@ -336,5 +379,47 @@ export default {
 .xm-container a:hover {
   color: red;
   flex-direction: none;
+}
+.mi-detail {
+  width: 1382px;
+  height: 2092px;
+}
+.product-box {
+  display: flex;
+  justify-content: center;
+  padding-top: 32px;
+  padding-bottom: 12px;
+}
+.img-left {
+  width: 606px;
+  height: 1732px;
+  position: relative;
+  left: -100px;
+}
+.swiper {
+  width: 560px;
+  height: 560px;
+}
+.swiper-container {
+  width: 560px;
+  height: 560px;
+}
+
+.img {
+  width: 560px;
+  height: 560px;
+}
+.swiper-button-prev {
+  color: #d6d6d6;
+}
+.swiper-button-next {
+  color: #d6d6d6;
+}
+.mi-detail .swiper-pagination-bullet {
+  background: #ccc;
+  width: 50px;
+  border-radius: 0;
+  border: 0;
+  height: 3px;
 }
 </style>
