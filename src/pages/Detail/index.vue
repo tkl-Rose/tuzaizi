@@ -120,6 +120,86 @@
             <!--    <div class="swiper-scrollbar"></div>-->
           </div>
         </div>
+
+        <div class="product-con">
+          <h2>黑鲨5 Pro</h2>
+          <p class="sale-desc">
+            <font color="#ff4a00"
+              >「购机即赠冰封散热背夹Pro ，享12期分期免息」</font
+            >
+            全新骁龙8处理器 | 120W超级闪充 | 逆重力双VC液冷系统 | 磁动力升降肩键
+            | 144Hz OLED柔性直屏 | 磁盘阵列2.0 | DXOMARK 音频第一名 |
+            一亿像素高清主摄
+          </p>
+          <p class="company-info">米哈游自营</p>
+          <div class="price-info">
+            <span>4699元</span>
+          </div>
+
+          <div class="activity-box">
+            <div class="flow-box">
+              <span class="flow-tag">赠品</span>
+              <span class="flow-name">
+                <div class="single">
+                  满1件赠价值179元黑鲨冰封散热背夹 Pro 黑色 赠完即止
+                </div>
+              </span>
+            </div>
+
+            <div class="address-box">
+              <div class="product-address">
+                <img src="../Detail/images/75.png" alt="" />
+                <div class="address-con">
+                  <div class="address-info">
+                    <span>北京</span>
+                    <span>北京市</span>
+                    <span>海定区</span>
+                    <span>清河街道</span>
+                  </div>
+                  <a class="edit" href="">修改</a>
+                  <div class="info">
+                    <div class="desc">
+                      <span>有现货</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="buy-option">
+              <div class="buy-box-child">
+                <div class="option-box">
+                  <div class="option-title">选择版本</div>
+                  <ul class="clearfix">
+                    <li class="active">
+                      <a href="">12GB+256GB</a>
+                    </li>
+                    <li class="active">
+                      <a href="">8GB+256GB</a>
+                    </li>
+                    <li class="active">
+                      <a href="">16GB+512GB</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="buy-box-child">
+                <div class="option-box">
+                  <div class="option-title">选择颜色</div>
+                  <ul class="clearfix">
+                    <li class="active">
+                      <a href="">陨石黑</a>
+                    </li>
+                    <li class="active">
+                      <a href="">天宫白</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -389,6 +469,7 @@ export default {
   justify-content: center;
   padding-top: 32px;
   padding-bottom: 12px;
+  margin-left: 300px;
 }
 .img-left {
   width: 606px;
@@ -421,5 +502,134 @@ export default {
   border-radius: 0;
   border: 0;
   height: 3px;
+}
+.product-con {
+  width: 600px;
+  -webkit-box-flex: 1;
+  flex: 1;
+  margin-left: 20px;
+}
+.product-con h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: #212121;
+}
+.product-con .sale-desc {
+  color: #b0b0b0;
+  margin: 0;
+  padding: 0;
+  padding-top: 8px;
+  line-height: 1.5;
+}
+.product-con .company-info {
+  color: #ff6700;
+  margin-bottom: 0;
+  height: 21px;
+  margin: 10px 0;
+}
+.product-con .price-info {
+  display: block;
+  font-size: 18px;
+  line-height: 1;
+  color: #ff6700;
+  padding: 12px 0 10px;
+}
+.activity-box {
+  padding: 24px 0 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.flow-box {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.flow-box .flow-tag {
+  width: 60px;
+  padding: 2px 0;
+  text-align: center;
+  background: #ff6700;
+  color: #fff;
+}
+.flow-box .flow-name {
+  width: 430px;
+  font-size: 14px;
+  line-height: 19px;
+  margin-left: 10px;
+}
+.product-con .address-box {
+  margin: 20px 0;
+}
+.product-address {
+  display: flex;
+  align-items: center;
+  padding: 30px 50px;
+  position: relative;
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+}
+.product-address img {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  font-size: 20px;
+  color: #999;
+}
+.address-con {
+  width: 498px;
+  height: 52px;
+}
+.product-address .address-info,
+.product-address .edit {
+  display: inline-block;
+}
+.product-address span {
+  display: inline;
+  margin-right: 14px;
+}
+.product-address .edit {
+  color: #ff6700;
+  margin: 0;
+}
+.product-address .info {
+  color: #b0b0b0;
+}
+.buy-option .batch-box,
+.buy-option .buy-box-child,
+.buy-option .buy-box-mode {
+  margin-bottom: 30px;
+  position: relative;
+}
+.buy-option .option-title {
+  font-size: 18px;
+}
+.clearfix {
+  // width: 600px;
+  // height: 108px;
+  display: flex;
+}
+.buy-option li {
+  width: 800px;
+  margin-right: 12px;
+  margin-top: 10px;
+  line-height: 42px;
+  height: 42px;
+  position: relative;
+  border: 1px solid #e0e0e0;
+  list-style: none;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  float: left;
+  font-size: 16px;
+  text-align: center;
+}
+
+.option-box li:hover {
+  z-index: 3;
+  border-color: #ff6700;
+  flex-direction: none;
 }
 </style>
