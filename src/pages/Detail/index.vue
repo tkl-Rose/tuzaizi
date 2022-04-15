@@ -198,6 +198,192 @@
                 </div>
               </div>
             </div>
+
+            <div class="service-box">
+              <div class="service-item-box">
+                <div class="service-item-title">
+                  选择米哈游提供的意外保护
+                  <a href="">了解意外保护></a>
+                </div>
+
+                <ul>
+                  <li>
+                    <el-radio v-model="radio"></el-radio>
+                  </li>
+                  <img
+                    class="service-item-box-img"
+                    src="../Detail/images/75.jpg"
+                    alt=""
+                  />
+                  <div class="service-boxTow">
+                    <h3 class="service-boxTow-em1">
+                      碎屏保障服务
+                      <em class="service-boxTow-em">碎屏免费修</em>
+                    </h3>
+                    <div class="service-desc">1年1次碎屏 官方原厂 免费维修</div>
+                    <div class="agreement-box">
+                      <el-checkbox v-model="checked">我已阅读</el-checkbox>
+                      <a href=""
+                        >服务条款
+                        <span>|</span>
+                      </a>
+                      <a href="">常见问题</a>
+                    </div>
+
+                    <div class="agreement-price">299元</div>
+                  </div>
+                </ul>
+              </div>
+
+              <div class="service-item-box">
+                <div class="service-item-title">
+                  选择米哈游提供的意外保护
+                  <a href="">了解云空间服务></a>
+                </div>
+
+                <ul>
+                  <li>
+                    <el-radio v-model="radio"></el-radio>
+                  </li>
+                  <img
+                    class="service-item-box-img"
+                    src="../Detail/images/76.png"
+                    alt=""
+                  />
+                  <div class="service-boxTow">
+                    <h3 class="service-boxTow-em1">
+                      云空间年卡200G
+                      <em class="service-boxTow-em">208元</em>
+                    </h3>
+                    <div class="service-desc">
+                      主商品签收后，自动激活至下单帐号
+                    </div>
+                    <div class="agreement-box">
+                      <el-checkbox v-model="checked">我已阅读</el-checkbox>
+                      <a href=""
+                        >注意事项
+                        <span>|</span>
+                      </a>
+                      <a href="">常见问题</a>
+                    </div>
+
+                    <div class="agreement-price">208元</div>
+                  </div>
+                </ul>
+                <ul>
+                  <li>
+                    <el-radio v-model="radio"></el-radio>
+                  </li>
+                  <img
+                    class="service-item-box-img"
+                    src="../Detail/images/76.png"
+                    alt=""
+                  />
+                  <div class="service-boxTow">
+                    <h3 class="service-boxTow-em1">
+                      云空间年卡50G
+                      <em class="service-boxTow-em">58元</em>
+                    </h3>
+                    <div class="service-desc">
+                      主商品签收后，自动激活至下单帐号
+                    </div>
+                    <div class="agreement-box">
+                      <el-checkbox v-model="checked">我已阅读</el-checkbox>
+                      <a href=""
+                        >注意事项
+                        <span>|</span>
+                      </a>
+                      <a href="">常见问题</a>
+                    </div>
+
+                    <div class="agreement-price">58元</div>
+                  </div>
+                </ul>
+                <ul>
+                  <li>
+                    <el-radio v-model="radio"></el-radio>
+                  </li>
+                  <img
+                    class="service-item-box-img"
+                    src="../Detail/images/76.png"
+                    alt=""
+                  />
+                  <div class="service-boxTow">
+                    <h3 class="service-boxTow-em1">
+                      云空间年卡200G
+                      <em class="service-boxTow-em">21元</em>
+                    </h3>
+                    <div class="service-desc">
+                      主商品签收后，自动激活至下单帐号
+                    </div>
+                    <div class="agreement-box">
+                      <el-checkbox v-model="checked">我已阅读</el-checkbox>
+                      <a href=""
+                        >注意事项
+                        <span>|</span>
+                      </a>
+                      <a href="">常见问题</a>
+                    </div>
+
+                    <div class="agreement-price">21元</div>
+                  </div>
+                </ul>
+              </div>
+            </div>
+
+            <div class="selected-list">
+              <ul>
+                <li>
+                  黑鲨5 Pro 12GB+256GB 陨石黑
+                  <span>4699元</span>
+                </li>
+              </ul>
+              <div class="total-box">总计:4699元</div>
+            </div>
+
+            <div class="btn-box">
+              <div class="sale-btn">
+                <el-button type="danger">加入购物车</el-button>
+              </div>
+
+              <div class="favorite-btn">
+                <el-button type="info">
+                  <img
+                    class="favorite-btn-img"
+                    src="../Detail/images/77.png"
+                    alt=""
+                  />
+                  喜欢
+                </el-button>
+              </div>
+            </div>
+
+            <div class="after-sale-info">
+              <span>
+                <img src="../Detail/images/78.png" alt="" />
+                <em>米哈游自营</em>
+              </span>
+              <span>
+                <img src="../Detail/images/78.png" alt="" />
+                <em>米哈游发货</em>
+              </span>
+              <span>
+                <img src="../Detail/images/78.png" alt="" />
+                <em>七天无理由退货</em>
+              </span>
+              <span>
+                <img src="../Detail/images/78.png" alt="" />
+                <em>运费说明</em>
+              </span>
+              <span>
+                <img src="../Detail/images/78.png" alt="" />
+                <em>企业信息</em>
+              </span>
+              <span>
+                <img src="../Detail/images/78.png" alt="" />
+                <em>7天价格保护</em>
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -214,6 +400,8 @@ export default {
       restaurants: [],
       state: "",
       seen: false,
+      radio: "0",
+      checked: false,
     };
   },
   mounted() {
@@ -462,7 +650,7 @@ export default {
 }
 .mi-detail {
   width: 1382px;
-  height: 2092px;
+  height: 1600px;
 }
 .product-box {
   display: flex;
@@ -538,7 +726,7 @@ export default {
 }
 .activity-box {
   padding: 24px 0 0;
-  border-bottom: 1px solid #e0e0e0;
+  // border-bottom: 1px solid #e0e0e0;
 }
 .flow-box {
   display: flex;
@@ -611,7 +799,7 @@ export default {
   display: flex;
 }
 .buy-option li {
-  width: 800px;
+  width: 85200px;
   margin-right: 12px;
   margin-top: 10px;
   line-height: 42px;
@@ -630,6 +818,181 @@ export default {
 .option-box li:hover {
   z-index: 3;
   border-color: #ff6700;
-  flex-direction: none;
+}
+.option-box a:hover {
+  color: #ff6700;
+  text-decoration-line: none;
+}
+.service-box {
+  width: 600px;
+  height: 680px;
+}
+.service-item-box {
+  margin-bottom: 30px;
+}
+.service-item-box .service-item-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 1;
+}
+.service-item-box .service-item-title a {
+  color: #ff6700;
+  font-size: 14px;
+  float: right;
+  line-height: 18px;
+}
+.service-item-box ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  margin-top: -1px;
+  background: #fff;
+  cursor: pointer;
+  padding: 30px 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+}
+.service-item-box li {
+  padding: 0 10px 0 30px;
+}
+.service-item-box li img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  margin-left: 10px;
+  float: left;
+}
+.service-item-box-img {
+  width: 50px;
+  height: 50px;
+}
+.service-boxTow {
+  -webkit-box-flex: 1;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.service-boxTow-em {
+  font-style: normal;
+  font-size: 14px;
+  background: #ff6700;
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 20px;
+  color: #fff;
+  margin-left: 2px;
+}
+.service-boxTow-em1 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+.service-desc {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  height: 18px;
+  color: #b0b0b0;
+  width: 286px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 5px;
+}
+.agreement-box {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.agreement-box a {
+  color: #ff6700;
+  margin: 0 2px;
+  display: inline-block;
+}
+.agreement-price {
+  position: absolute;
+  right: 20px;
+  bottom: 28px;
+  color: #757575;
+}
+.service-item-box1 {
+  display: flex;
+  flex-direction: column;
+}
+.selected-list {
+  height: 66px;
+  background: #f9f9fa;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+.selected-list ul {
+  padding: 0;
+  margin: 0;
+}
+.selected-list li {
+  display: flex;
+  justify-content: space-between;
+}
+.total-box {
+  color: #ff6700;
+  font-size: 24px;
+  padding-top: 20px;
+}
+.btn-box {
+  display: flex;
+  margin: 10px 0 20px 0;
+}
+.sale-btn .el-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 298px;
+  height: 52px;
+  text-align: center;
+  line-height: 52px;
+  font-size: 16px;
+  background-color: #ff6700;
+}
+.favorite-btn {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 20px;
+}
+.favorite-btn .el-button {
+  width: 142px;
+  height: 54px;
+}
+.favorite-btn-img {
+  position: relative;
+  top: 5px;
+}
+.el-button--info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.after-sale-info {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 80px;
+}
+.after-sale-info span {
+  display: flex;
+  align-items: center;
+  display: inline-block;
+  width: 113px;
+  height: 42px;
+  margin-right: 10px;
+  color: #b0b0b0;
+}
+.after-sale-info span img {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 5px;
 }
 </style>
