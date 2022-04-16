@@ -93,6 +93,29 @@
         </div>
       </div>
     </div>
+    <div v-if="testShow" class="xm-product-box1">
+      <div class="nav-bar">
+        <div class="xm-container">
+          <h2>黑鲨5 Pro</h2>
+          <div class="xm-left">
+            <span class="separator">|</span>
+            <a href="">黑鲨4S Pro</a>
+          </div>
+
+          <div class="xm-right">
+            <a href="">概述页</a>
+            <span class="separator">|</span>
+            <a href="">参数页</a>
+            <span class="separator">|</span>
+            <a href="">F码通道</a>
+            <span class="separator">|</span>
+            <a href="">咨询客服</a>
+            <span class="separator">|</span>
+            <a href="">用户评价</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="mi-detail">
       <div class="product-box">
@@ -402,9 +425,12 @@ export default {
       seen: false,
       radio: "0",
       checked: false,
+      scrollTopNum: "", //页面滚动的高度
+      testShow: false,
     };
   },
   mounted() {
+    window.addEventListener("scroll", this.handleScroll, true); //监视进度条滚动
     var swiper = new Swiper(".swiper-container", {
       loop: true, //无缝轮播
       effect: "fade",
@@ -445,6 +471,13 @@ export default {
     ...mapState("home", ["bannerList"]),
   },
   methods: {
+    handleScroll() {
+      let top =
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
+        window.pageYOffset;
+      this.scrollTopNum = top;
+    },
     querySearch(queryString, cb) {
       var restaurants = this.restaurants;
       var results = queryString
@@ -496,6 +529,15 @@ export default {
       location.query = this.$router.query;
 
       this.$router.push(location);
+    },
+  },
+  watch: {
+    scrollTopNum() {
+      if (this.scrollTopNum > 201) {
+        this.testShow = true;
+      } else {
+        this.testShow = false;
+      }
     },
   },
 };
@@ -617,6 +659,16 @@ export default {
   border-bottom: 1px solid #e0e0e0;
   box-shadow: 0 5px 5px rgb(0 0 0 / 7%);
 }
+.xm-product-box1 {
+  width: 100%;
+  position: fixed;
+  top: 1px;
+  z-index: 9999;
+  // border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  background: #fff;
+  box-shadow: 0 5px 5px rgb(0 0 0 / 7%);
+}
 .nav-bar {
   position: relative;
   height: 63px;
@@ -646,7 +698,7 @@ export default {
 }
 .xm-container a:hover {
   color: red;
-  flex-direction: none;
+  text-decoration: none;
 }
 .mi-detail {
   width: 1382px;
