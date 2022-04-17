@@ -366,7 +366,9 @@
 
             <div class="btn-box">
               <div class="sale-btn">
-                <el-button type="danger">加入购物车</el-button>
+                <el-button @click="toMarkDown" type="danger"
+                  >加入购物车</el-button
+                >
               </div>
 
               <div class="favorite-btn">
@@ -477,6 +479,9 @@ export default {
         document.body.scrollTop ||
         window.pageYOffset;
       this.scrollTopNum = top;
+    },
+    toMarkDown() {
+      this.$router.replace("/Buy");
     },
     querySearch(queryString, cb) {
       var restaurants = this.restaurants;
@@ -1022,6 +1027,10 @@ export default {
   top: 5px;
 }
 .el-button--info {
+  text-align: center;
+  width: 55px;
+  height: 25px;
+  line-height: 25px;
   display: flex;
   align-items: center;
   justify-content: center;

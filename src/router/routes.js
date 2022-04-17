@@ -2,6 +2,7 @@ const Home = () => import('../pages/Home/index.vue')
 // import Search from '../pages/Search'
 const Search = () => import('../pages/Search')
 const Detail = () => import('../pages/Detail')
+const Buy = () => import('../pages/Buy')
 
 export default [{
         name: 'home',
@@ -17,5 +18,10 @@ export default [{
         name: 'detail', // 路由名称
         path: '/detail',
         component: Detail,
+    },
+    {
+        name: 'buy', // 路由名称
+        path: '/buy',
+        component: Buy,
     },
 ]
