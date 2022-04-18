@@ -51,7 +51,6 @@
         <span>（0）</span>
       </div>
     </div>
-    
   </div>
 </template>
 
@@ -97,6 +96,7 @@ export default {
 }
 .left a:hover {
   color: #fff;
+  text-decoration: none;
 }
 .appcode {
   position: absolute;

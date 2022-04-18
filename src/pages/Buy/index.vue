@@ -93,6 +93,98 @@
             </a>
           </div>
         </div>
+
+        <div class="mi-recommend">
+          <h2 class="recommend-title">
+            <span>买购物车中商品的人还买了</span>
+          </h2>
+          <div class="recommend-bd">
+            <ul class="recommend-list">
+              <li class="recommend-item">
+                <a href="">
+                  <img src="../Buy/images/81.png" alt="" />
+                  <div class="recommend-name">Xiaomi 11 青春版</div>
+                  <div class="recommend-price">1999元</div>
+                  <div class="recommend-tips">32.2万人好评</div>
+                </a>
+              </li>
+              <li class="recommend-item">
+                <a href="">
+                  <img src="../Buy/images/82.png" alt="" />
+                  <div class="recommend-name">Redmi 9A</div>
+                  <div class="recommend-price">599元</div>
+                  <div class="recommend-tips">112.2万人好评</div>
+                </a>
+              </li>
+              <li class="recommend-item">
+                <a href="">
+                  <img src="../Buy/images/83.png" alt="" />
+                  <div class="recommend-name">小米巨能写中性笔10支装</div>
+                  <div class="recommend-price">9.99元</div>
+                  <div class="recommend-tips">196.2万人好评</div>
+                </a>
+              </li>
+              <li class="recommend-item">
+                <a href="">
+                  <img src="../Buy/images/84.png" alt="" />
+                  <div class="recommend-name">Redmi 10A</div>
+                  <div class="recommend-price">699元</div>
+                  <div class="recommend-tips">3141人好评</div>
+                </a>
+              </li>
+              <li class="recommend-item">
+                <a href="">
+                  <img src="../Buy/images/85.png" alt="" />
+                  <div class="recommend-name">Note 10 5G</div>
+                  <div class="recommend-price">1099元</div>
+                  <div class="recommend-tips">62.2万人好评</div>
+                </a>
+              </li>
+              <li class="recommend-item">
+                <a href="">
+                  <img src="../Buy/images/86.png" alt="" />
+                  <div class="recommend-name">米哈游手环6</div>
+                  <div class="recommend-price">199元</div>
+                  <div class="recommend-tips">64.2万人好评</div>
+                </a>
+              </li>
+              <li class="recommend-item">
+                <a href="">
+                  <img src="../Buy/images/87.png" alt="" />
+                  <div class="recommend-name">Note 10 Pro</div>
+                  <div class="recommend-price">1499元</div>
+                  <div class="recommend-tips">62.2万人好评</div>
+                </a>
+              </li>
+              <li class="recommend-item">
+                <a href="">
+                  <img src="../Buy/images/88.png" alt="" />
+                  <div class="recommend-name">Note 11 4G</div>
+                  <div class="recommend-price">999元</div>
+                  <div class="recommend-tips">5.4万人好评</div>
+                </a>
+              </li>
+              <li class="recommend-item">
+                <a href="">
+                  <img src="../Buy/images/89.png" alt="" />
+                  <div class="recommend-name">
+                    小米车载充电器快充版1A1C 100W
+                  </div>
+                  <div class="recommend-price">99元</div>
+                  <div class="recommend-tips">13.2万人好评</div>
+                </a>
+              </li>
+              <li class="recommend-item">
+                <a href="">
+                  <img src="../Buy/images/90.png" alt="" />
+                  <div class="recommend-name">Redmi Buds 3</div>
+                  <div class="recommend-price">179元</div>
+                  <div class="recommend-tips">21.2万人好评</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -293,7 +385,7 @@ export default {
 }
 .page-main {
   width: 100%;
-  height: 906px;
+  height: 806px;
   padding: 38px 0;
   background: #f5f5f5;
 }
@@ -342,9 +434,93 @@ export default {
   border-color: #b0b0b0;
   margin-right: 12px;
 }
-
+.goods-info.el-button--info:hover {
+  text-decoration: none;
+}
 .info-btn {
   background-color: #ff6700;
   color: #fff;
+}
+.actions {
+  display: flex;
+}
+.mi-recommend {
+  padding-top: 30px;
+  width: 1226px;
+  height: 665px;
+}
+.recommend-title {
+  position: relative;
+  margin: 0;
+  height: 50px;
+  font-size: 30px;
+  font-weight: 400;
+  color: #757575;
+  border-top: 1px solid #e0e0e0;
+}
+.recommend-title span {
+  position: absolute;
+  top: -20px;
+  left: 372px;
+  height: 40px;
+  width: 482px;
+  line-height: 40px;
+  text-align: center;
+  display: block;
+  background-color: #f5f5f5;
+}
+.recommend-bd {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+.recommend-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.recommend-item {
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+  width: 234px;
+  height: 300px;
+  padding: 0 20px;
+  // margin: 0 0 14px 14px;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  background-color: #fff;
+  text-align: center;
+  margin: 0 10px 10px 0;
+}
+.recommend-item img {
+  width: 140px;
+  height: 140px;
+  margin-top: 40px;
+}
+.recommend-name {
+  margin: 10px 10px 10px;
+  height: 18px;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #333;
+}
+.recommend-price {
+  margin-bottom: 10px;
+  color: #ff6700;
+}
+.recommend-tips {
+  position: relative;
+  color: #757575;
+  margin-top: 15px;
+}
+.recommend-item a:hover {
+  text-decoration: none;
 }
 </style>
