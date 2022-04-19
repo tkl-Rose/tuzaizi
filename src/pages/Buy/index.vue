@@ -88,7 +88,7 @@
               <el-button type="info">返回上一级</el-button>
             </a>
 
-            <a href="">
+            <a href="../Cart">
               <el-button class="info-btn" type="info">去购物车结算</el-button>
             </a>
           </div>
