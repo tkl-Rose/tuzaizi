@@ -19,6 +19,7 @@ Vue.use(VideoPlayer)
 
 //element-ui的按需引入
 import {
+  InputNumber,
   Pagination,
   Checkbox,
   Button,
@@ -39,6 +40,7 @@ Vue.use(Backtop)
 Vue.use(Checkbox)
 Vue.use(Pagination)
 Vue.use(Radio)
+Vue.use(InputNumber)
 
 //这就是第二类组件的注册方式
 Vue.prototype.$msgbox = MessageBox;

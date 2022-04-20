@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header" v-show="!$route.meta.isHiddenHeader">
     <div class="top">
       <!--头部第一行-->
       <div class="left">

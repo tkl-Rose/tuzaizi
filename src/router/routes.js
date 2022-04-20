@@ -3,6 +3,7 @@ const Home = () => import('../pages/Home/index.vue')
 const Search = () => import('../pages/Search')
 const Detail = () => import('../pages/Detail')
 const Buy = () => import('../pages/Buy')
+const Cart = () => import('../pages/Cart')
 
 export default [{
         name: 'home',
@@ -23,5 +24,13 @@ export default [{
         name: 'buy', // 路由名称
         path: '/buy',
         component: Buy,
+    },
+    {
+        name: 'cart', // 路由名称
+        path: '/cart',
+        component: Cart,
+        meta: {
+            isHiddenHeader: true
+        }
     },
 ]
