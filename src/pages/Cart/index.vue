@@ -82,6 +82,73 @@
                         </div>
                       </div>
                     </div>
+
+                    <div class="item-sub-box1">
+                      <div class="item-table1">
+                        <div class="item-row1">
+                          <div class="colcol-img">
+                            <a href="">
+                              <img src="./images/90.jpg" alt="" />
+                            </a>
+                          </div>
+                          <div class="colcol-name">
+                            <div class="tags">
+                              <span class="tag">赠品</span>
+                            </div>
+                            <h3 class="name">
+                              <a href="">冰封散热背夹 Pro</a>
+                            </h3>
+                          </div>
+                          <div class="colcol-price"></div>
+                          <div class="colcol-num">1</div>
+                          <div class="colcol-total"></div>
+                          <div class="colcol-actions"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item-sub-box2">
+                      <div class="exetend-buy">
+                        <img src="./images/95.png" alt="" />
+                        碎屏保障服务
+                        <span>
+                          299元
+                          <span class="price-diff">（碎屏免费修）</span>
+                        </span>
+                        <a href="">了解意外保护 ></a>
+                      </div>
+                    </div>
+
+                    <div class="item-sub-box3">
+                      <div class="extend-buy">
+                        <img src="./images/95.png" alt="" />
+                        云空间年卡200G
+                        <span> 208元 </span>
+                        <a href="" class="agreement">了解云空间服务 ></a>
+                      </div>
+                      <div class="extend-buy">
+                        <img src="./images/95.png" alt="" />
+                        云空间年卡50G
+                        <span> 58元 </span>
+                        <a href="" class="agreement">了解云空间服务 ></a>
+                      </div>
+                      <div class="extend-buy">
+                        <img src="./images/95.png" alt="" />
+                        云空间年卡200G
+                        <span> 21元 </span>
+                        <a href="" class="agreement">了解云空间服务 ></a>
+                      </div>
+                    </div>
+
+                    <div class="item-sub-box2">
+                      <div class="exetend-buy">
+                        <img src="./images/95.png" alt="" />
+                        +99元赠小米游戏鼠标Lite 99元
+                        <span>
+                          <span class="price-diff">( 省 30 元 )</span>
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -107,7 +174,7 @@
                   </a>
                 </span>
 
-                <div class="no-select-tip">
+                <div v-show="Bug" class="no-select-tip">
                   请勾选需要结算的商品
                   <i class="arrow-a"></i>
                   <i class="arrow-b"></i>
@@ -128,6 +195,7 @@ export default {
     return {
       checked: false,
       num: 1,
+      Bug: false,
     };
   },
   methods: {
@@ -302,6 +370,8 @@ export default {
   color: #ff6700;
 }
 .total-price {
+  position: relative;
+  top: -25px;
   padding-left: 13px;
   color: #ff6700;
 }
@@ -320,12 +390,12 @@ export default {
   margin-left: 50px;
 }
 .no-select-tip {
+  position: absolute;
   width: 190px;
   height: 48px;
   line-height: 48px;
-  position: relative;
-  top: -108px;
-  right: -130px;
+  top: 280px;
+  right: 300px;
   background-color: #fff;
   border: 1px solid #ff6700;
   color: #ff6700;
