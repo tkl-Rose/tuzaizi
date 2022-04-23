@@ -30,7 +30,10 @@
             <div class="cart-goods-list">
               <div class="list-head">
                 <div class="colcol-check">
-                  <el-checkbox class="colcol-check-check1" v-model="checked"
+                  <el-checkbox
+                    class="colcol-check-check1"
+                    v-model="checked"
+                    @change="agreeChange"
                     >全选</el-checkbox
                   >
                 </div>
@@ -50,7 +53,8 @@
                         <div class="colcol-check">
                           <el-checkbox
                             class="colcol-check-check2"
-                            v-model="checked"
+                            v-model="item.value"
+                            @change="agreeChange"
                           ></el-checkbox>
                         </div>
                         <div class="colcol-img">
@@ -83,212 +87,218 @@
                       </div>
                     </div>
 
-                    <div class="item-sub-box1">
-                      <div class="item-table1">
-                        <div class="item-row1">
-                          <div class="colcol-img">
-                            <a href="">
-                              <img src="./images/90.jpg" alt="" />
-                            </a>
-                          </div>
-                          <div class="colcol-name">
-                            <div class="tags">
-                              <span class="tag">赠品</span>
+                    <div v-show="But" class="item-sub-box1">
+                      <div class="item-tab">
+                        <div class="item-table1">
+                          <div class="item-row1">
+                            <div class="colcol-img">
+                              <a href="">
+                                <img src="./images/90.jpg" alt="" />
+                              </a>
                             </div>
-                            <h3 class="name">
-                              <a href="">冰封散热背夹 Pro</a>
-                            </h3>
+                            <div class="colcol-name">
+                              <div class="tags">
+                                <span class="tag">赠品</span>
+                              </div>
+                              <h3 class="name">
+                                <a href="">冰封散热背夹 Pro</a>
+                              </h3>
+                            </div>
+                            <div class="colcol-price"></div>
+                            <div class="colcol-num">1</div>
+                            <div class="colcol-total"></div>
+                            <div class="colcol-actions"></div>
                           </div>
-                          <div class="colcol-price"></div>
-                          <div class="colcol-num">1</div>
-                          <div class="colcol-total"></div>
-                          <div class="colcol-actions"></div>
                         </div>
-                      </div>
-                      <div class="item-sub-box2">
-                        <div class="exetend-buy">
-                          <img
-                            class="extend-buy-img"
-                            src="./images/95.png"
-                            alt=""
-                          />
-                          碎屏保障服务
-                          <span>
-                            299元
-                            <span class="price-diff">(碎屏免费修)</span>
-                          </span>
-                          <a href="" class="agreement">了解意外保护 ></a>
+                        <div class="item-sub-box2">
+                          <div class="exetend-buy">
+                            <img
+                              class="extend-buy-img"
+                              src="./images/95.png"
+                              alt=""
+                            />
+                            碎屏保障服务
+                            <span>
+                              299元
+                              <span class="price-diff">(碎屏免费修)</span>
+                            </span>
+                            <a href="" class="agreement">了解意外保护 ></a>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="item-sub-box3">
-                        <div class="extend-buy">
-                          <img
-                            class="extend-buy-img"
-                            src="./images/95.png"
-                            alt=""
-                          />
-                          云空间年卡200G
-                          <span> 208元 </span>
-                          <a href="" class="agreement">了解云空间服务 ></a>
+                        <div class="item-sub-box3">
+                          <div class="extend-buy">
+                            <img
+                              class="extend-buy-img"
+                              src="./images/95.png"
+                              alt=""
+                            />
+                            云空间年卡200G
+                            <span> 208元 </span>
+                            <a href="" class="agreement">了解云空间服务 ></a>
+                          </div>
+                          <div class="extend-buy">
+                            <img
+                              class="extend-buy-img"
+                              src="./images/95.png"
+                              alt=""
+                            />
+                            云空间年卡50G
+                            <span> 58元 </span>
+                            <a href="" class="agreement">了解云空间服务 ></a>
+                          </div>
+                          <div class="extend-buy">
+                            <img
+                              class="extend-buy-img"
+                              src="./images/95.png"
+                              alt=""
+                            />
+                            云空间年卡200G
+                            <span> 21元 </span>
+                            <a href="" class="agreement">了解云空间服务 ></a>
+                          </div>
                         </div>
-                        <div class="extend-buy">
-                          <img
-                            class="extend-buy-img"
-                            src="./images/95.png"
-                            alt=""
-                          />
-                          云空间年卡50G
-                          <span> 58元 </span>
-                          <a href="" class="agreement">了解云空间服务 ></a>
-                        </div>
-                        <div class="extend-buy">
-                          <img
-                            class="extend-buy-img"
-                            src="./images/95.png"
-                            alt=""
-                          />
-                          云空间年卡200G
-                          <span> 21元 </span>
-                          <a href="" class="agreement">了解云空间服务 ></a>
-                        </div>
-                      </div>
 
-                      <div class="item-sub-box2">
-                        <div class="exetend-buy">
-                          <img
-                            class="extend-buy-img"
-                            src="./images/95.png"
-                            alt=""
-                          />
-                          +99元赠小米游戏鼠标Lite 99元
-                          <span>
-                            <span class="price-diff">( 省 30 元 )</span>
-                          </span>
+                        <div class="item-sub-box2">
+                          <div class="exetend-buy">
+                            <img
+                              class="extend-buy-img"
+                              src="./images/95.png"
+                              alt=""
+                            />
+                            +99元赠小米游戏鼠标Lite 99元
+                            <span>
+                              <span class="price-diff">( 省 30 元 )</span>
+                            </span>
+                          </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+                  <div class="cart-bar">
+                    <div class="section-left">
+                      <a href="" class="back-shopping">继续购物</a>
+                      <span class="cart-total">
+                        已选择
+                        <i>0</i>
+                        件
+                      </span>
+                    </div>
+
+                    <div>
+                      <span class="total-price">
+                        合计:
+                        <em>0</em>
+                        元
+                        <a href="">
+                          <el-button class="total-btn">去结算</el-button>
+                        </a>
+                      </span>
+
+                      <div v-show="Bug" class="no-select-tip">
+                        请勾选需要结算的商品
+                        <i class="arrow-a"></i>
+                        <i class="arrow-b"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mi-recommend">
+                    <h2 class="recommend-title">
+                      <span>买购物车中商品的人还买了</span>
+                    </h2>
+                    <div class="recommend-bd">
+                      <ul class="recommend-list">
+                        <li class="recommend-item">
+                          <a href="">
+                            <img src="../Buy/images/81.png" alt="" />
+                            <div class="recommend-name">Xiaomi 11 青春版</div>
+                            <div class="recommend-price">1999元</div>
+                            <div class="recommend-tips">32.2万人好评</div>
+                          </a>
+                        </li>
+                        <li class="recommend-item">
+                          <a href="">
+                            <img src="../Buy/images/82.png" alt="" />
+                            <div class="recommend-name">Redmi 9A</div>
+                            <div class="recommend-price">599元</div>
+                            <div class="recommend-tips">112.2万人好评</div>
+                          </a>
+                        </li>
+                        <li class="recommend-item">
+                          <a href="">
+                            <img src="../Buy/images/83.png" alt="" />
+                            <div class="recommend-name">
+                              小米巨能写中性笔10支装
+                            </div>
+                            <div class="recommend-price">9.99元</div>
+                            <div class="recommend-tips">196.2万人好评</div>
+                          </a>
+                        </li>
+                        <li class="recommend-item">
+                          <a href="">
+                            <img src="../Buy/images/84.png" alt="" />
+                            <div class="recommend-name">Redmi 10A</div>
+                            <div class="recommend-price">699元</div>
+                            <div class="recommend-tips">3141人好评</div>
+                          </a>
+                        </li>
+                        <li class="recommend-item">
+                          <a href="">
+                            <img src="../Buy/images/85.png" alt="" />
+                            <div class="recommend-name">Note 10 5G</div>
+                            <div class="recommend-price">1099元</div>
+                            <div class="recommend-tips">62.2万人好评</div>
+                          </a>
+                        </li>
+                        <li class="recommend-item">
+                          <a href="">
+                            <img src="../Buy/images/86.png" alt="" />
+                            <div class="recommend-name">米哈游手环6</div>
+                            <div class="recommend-price">199元</div>
+                            <div class="recommend-tips">64.2万人好评</div>
+                          </a>
+                        </li>
+                        <li class="recommend-item">
+                          <a href="">
+                            <img src="../Buy/images/87.png" alt="" />
+                            <div class="recommend-name">Note 10 Pro</div>
+                            <div class="recommend-price">1499元</div>
+                            <div class="recommend-tips">62.2万人好评</div>
+                          </a>
+                        </li>
+                        <li class="recommend-item">
+                          <a href="">
+                            <img src="../Buy/images/88.png" alt="" />
+                            <div class="recommend-name">Note 11 4G</div>
+                            <div class="recommend-price">999元</div>
+                            <div class="recommend-tips">5.4万人好评</div>
+                          </a>
+                        </li>
+                        <li class="recommend-item">
+                          <a href="">
+                            <img src="../Buy/images/89.png" alt="" />
+                            <div class="recommend-name">
+                              小米车载充电器快充版1A1C 100W
+                            </div>
+                            <div class="recommend-price">99元</div>
+                            <div class="recommend-tips">13.2万人好评</div>
+                          </a>
+                        </li>
+                        <li class="recommend-item">
+                          <a href="">
+                            <img src="../Buy/images/90.png" alt="" />
+                            <div class="recommend-name">Redmi Buds 3</div>
+                            <div class="recommend-price">179元</div>
+                            <div class="recommend-tips">21.2万人好评</div>
+                          </a>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="cart-bar">
-        <div class="section-left">
-          <a href="" class="back-shopping">继续购物</a>
-          <span class="cart-total">
-            已选择
-            <i>0</i>
-            件
-          </span>
-        </div>
-
-        <div>
-          <span class="total-price">
-            合计:
-            <em>0</em>
-            元
-            <a href="">
-              <el-button class="total-btn">去结算</el-button>
-            </a>
-          </span>
-
-          <div v-show="Bug" class="no-select-tip">
-            请勾选需要结算的商品
-            <i class="arrow-a"></i>
-            <i class="arrow-b"></i>
-          </div>
-        </div>
-      </div>
-      <div class="mi-recommend">
-        <h2 class="recommend-title">
-          <span>买购物车中商品的人还买了</span>
-        </h2>
-        <div class="recommend-bd">
-          <ul class="recommend-list">
-            <li class="recommend-item">
-              <a href="">
-                <img src="../Buy/images/81.png" alt="" />
-                <div class="recommend-name">Xiaomi 11 青春版</div>
-                <div class="recommend-price">1999元</div>
-                <div class="recommend-tips">32.2万人好评</div>
-              </a>
-            </li>
-            <li class="recommend-item">
-              <a href="">
-                <img src="../Buy/images/82.png" alt="" />
-                <div class="recommend-name">Redmi 9A</div>
-                <div class="recommend-price">599元</div>
-                <div class="recommend-tips">112.2万人好评</div>
-              </a>
-            </li>
-            <li class="recommend-item">
-              <a href="">
-                <img src="../Buy/images/83.png" alt="" />
-                <div class="recommend-name">小米巨能写中性笔10支装</div>
-                <div class="recommend-price">9.99元</div>
-                <div class="recommend-tips">196.2万人好评</div>
-              </a>
-            </li>
-            <li class="recommend-item">
-              <a href="">
-                <img src="../Buy/images/84.png" alt="" />
-                <div class="recommend-name">Redmi 10A</div>
-                <div class="recommend-price">699元</div>
-                <div class="recommend-tips">3141人好评</div>
-              </a>
-            </li>
-            <li class="recommend-item">
-              <a href="">
-                <img src="../Buy/images/85.png" alt="" />
-                <div class="recommend-name">Note 10 5G</div>
-                <div class="recommend-price">1099元</div>
-                <div class="recommend-tips">62.2万人好评</div>
-              </a>
-            </li>
-            <li class="recommend-item">
-              <a href="">
-                <img src="../Buy/images/86.png" alt="" />
-                <div class="recommend-name">米哈游手环6</div>
-                <div class="recommend-price">199元</div>
-                <div class="recommend-tips">64.2万人好评</div>
-              </a>
-            </li>
-            <li class="recommend-item">
-              <a href="">
-                <img src="../Buy/images/87.png" alt="" />
-                <div class="recommend-name">Note 10 Pro</div>
-                <div class="recommend-price">1499元</div>
-                <div class="recommend-tips">62.2万人好评</div>
-              </a>
-            </li>
-            <li class="recommend-item">
-              <a href="">
-                <img src="../Buy/images/88.png" alt="" />
-                <div class="recommend-name">Note 11 4G</div>
-                <div class="recommend-price">999元</div>
-                <div class="recommend-tips">5.4万人好评</div>
-              </a>
-            </li>
-            <li class="recommend-item">
-              <a href="">
-                <img src="../Buy/images/89.png" alt="" />
-                <div class="recommend-name">小米车载充电器快充版1A1C 100W</div>
-                <div class="recommend-price">99元</div>
-                <div class="recommend-tips">13.2万人好评</div>
-              </a>
-            </li>
-            <li class="recommend-item">
-              <a href="">
-                <img src="../Buy/images/90.png" alt="" />
-                <div class="recommend-name">Redmi Buds 3</div>
-                <div class="recommend-price">179元</div>
-                <div class="recommend-tips">21.2万人好评</div>
-              </a>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
@@ -300,15 +310,32 @@ export default {
   name: "cart",
   data() {
     return {
-      checked: false,
+      agreeChange: "",
+      // checked: false,
       num: 1,
-      Bug: false,
+      Bug: true,
+      But: false,
     };
+  },
+  computed: {
+    checked: {
+      get() {
+        // 设置全选根据单项变化
+      },
+      set(newValue) {
+        this.But = !this.But;
+        this.Bug = !this.Bug;
+        console.log("Ln 24 " + newValue);
+      },
+    },
   },
   methods: {
     handleChange(value) {
       console.log(value);
     },
+  },
+  agreeChange(val) {
+    console.log("Ln 30 " + val);
   },
 };
 </script>
@@ -369,20 +396,28 @@ export default {
 }
 .mi-cart {
   width: 100%;
-  height: 1372px;
+  height: 972px;
   padding: 38px 0;
   background: #f5f5f5;
 }
 .mi-container {
+  // display: block;
   width: 1126px;
-  height: 580px;
+  height: 1072px;
   margin-left: 300px;
 }
-.cart-wrap {
+.item-box {
   width: 1126px;
-  height: 257px;
+  // height: 485px;
+  background-color: #fff;
+}
+.cart-wrap {
+  position: absolute;
+  width: 1126px;
+  height: 655px;
 }
 .cart-goods-list {
+  height: 186.99px;
   background-color: #fff;
 }
 .list-head {
@@ -457,14 +492,15 @@ export default {
   font-size: 16px;
 }
 .cart-bar {
+  display: inline-block;
   width: 1128px;
-  margin-left: 300px;
+  // margin-left: 300px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 50px;
   background-color: #fff;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .section-left .back-shopping {
   line-height: 50px;
@@ -505,8 +541,8 @@ export default {
   width: 190px;
   height: 48px;
   line-height: 48px;
-  top: 280px;
-  right: 300px;
+  top: 150px;
+  right: 0px;
   background-color: #fff;
   border: 1px solid #ff6700;
   color: #ff6700;
@@ -526,11 +562,15 @@ export default {
   border-style: solid dashed dashed dashed;
   border-color: #f30 transparent transparent transparent;
 }
-.item-sub-box1 {
-  width: 1126px;
+// .item-sub-box1 {
+//   width: 1126px;
+//   // height: 400px;
+//   background-color: #fff;
+//   // margin-top: 30px;
+// }
+.item-tab {
   height: 400px;
-  background-color: #fff;
-  // margin-top: 30px;
+  width: 1000px;
 }
 .item-table1 {
   background-color: #fff;
@@ -620,7 +660,7 @@ export default {
   padding-top: 30px;
   width: 1226px;
   height: 665px;
-  margin-left: 300px;
+  // margin-left: 300px;
 }
 .recommend-title {
   position: relative;
